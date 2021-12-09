@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+    background-size: cover;
+}
+
+.title {
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+    margin: 25px 0 30px 0;
+    font-size: 2.6em;
+}
+
+#gameBoard {
+    max-width: 700px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    width: 115px;
+    height: 115px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.card_back, .card_front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+    backface-visibility: hidden;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.card_front {
+    transform: rotateY(180deg);
+    background: #101c2c;
+}
+
+.card_back {
+    color: #101c2c;
+    background: #05c3ff;
+    font-size: 30px;
+}
+
+#gameOver {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    top: 0;
+    transition: all .4s;
+}
+
+#gameOver > button {
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #ffff00;
+    border: none;
+    border-radius: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+.bordaPar {
+    transition: border .2s;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px #fff;
+    border-radius: 20px;
+}
+
+footer {
+    margin: 15px 0 5px 0;
+    color: #fff;
+    text-shadow: 0 0 3px #fff;
+    font-size: 1.2em;
+}
