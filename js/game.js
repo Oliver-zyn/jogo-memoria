@@ -10,7 +10,7 @@ let game = {
     "firebase",
     "html",
     "javascript",
-    "jQuery",
+    "jquery",
     "mongo",
     "node",
     "react",
